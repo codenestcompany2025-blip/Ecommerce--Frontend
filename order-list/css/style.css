@@ -1,0 +1,802 @@
+/* Reset default margin, padding, and set box-sizing to border-box */
+* {     
+    margin: 0;     
+    padding: 0;     
+    box-sizing: border-box; 
+} 
+
+
+/* Sidebar styling */
+#sidebar {
+    width: 15%;
+    height: 100vh;             
+    background-color: #0A766D;
+    position: fixed;          
+    top: 0;
+    left: 0;
+    overflow-y: auto;       
+}
+ 
+
+/* Logo container heading styling */
+.logo-container h2 {     
+    color: #fff;     
+    font-family: "Ruwudu", serif;     
+    font-weight: 700;     
+    font-size: 26px;     
+    padding-top: 7px; 
+}  
+
+/* Logo circle styling */
+.logo {     
+    background-color: #fff;     
+    width: 40px;     
+    height: 40px;     
+    border-radius: 50%;     
+    color: #0A766D;     
+    font-size: 40px;     
+    font-weight: 500;     
+    display: flex;     
+    font-family: 'Times New Roman', Times, serif;     
+    justify-content: center;     
+    align-items: center;     
+    position: relative; 
+}  
+
+/* Logo decorative line after element */
+.logo::after {     
+    content: "";     
+    position: absolute;     
+    background-color: #0A766D;     
+    width: 27px;     
+    height: 2px;     
+    top: 50%;     
+    left: 68%;     
+    transform: translate(-50%, -50%);     
+    border-radius: 5px; 
+}  
+
+/* Rotate logout icon */
+.fa-right-from-bracket {     
+    transform: rotate(180deg); 
+}  
+
+/* Sidebar paragraph styling */
+#sidebar p {     
+    color: rgba(182, 223, 219, 1);     
+    font-weight: 400;     
+    font-size: 14px; 
+}  
+
+/* Sidebar list span styling */
+ul li span {     
+    font-size: 16px;     
+    color: rgba(231, 244, 243, 1); 
+}  
+
+/* Sidebar list items spacing and font */
+ul li {     
+    margin-block: 20px;     
+    padding: 5px;     
+    font-family: "Plus Jakarta Sans", sans-serif;  
+}  
+
+/* Sidebar links color */
+ul li a {     
+    color: #fff; 
+}  
+
+/* Sidebar list hover effect */
+ul li:hover {     
+    background-color: #fff;     
+    border-radius: 8px;     
+    color: teal; 
+}  
+
+/* Sidebar links hover color */
+ul li:hover a {     
+    color: rgba(5, 59, 54, 1); 
+}  
+
+/* Sidebar spans hover color */
+ul li:hover span {     
+    color: rgba(5, 59, 54, 1); 
+}  
+
+/* Dashboard container styling */
+#dashboard {     
+    width: 85%;     
+    height: 87px;     
+    margin-top: 80px; 
+}  
+
+/* Header styling */
+header {     
+    background-color: rgba(231, 244, 243, 1);     
+    border-bottom: 2px solid rgba(231, 231, 231, 1);     
+    padding: 20px;     
+    position: fixed;     
+    top: 0;     
+    left: 15%;     
+    width: 85%;     
+    z-index: 1000; 
+    
+}  
+
+/* Search icon positioning in header */
+header .fa-magnifying-glass {     
+    top: 10px;     
+    left: 88%; 
+}  
+
+/* Icons container padding and border */
+.icons {     
+    padding: 10px;     
+    border-right: 1px solid rgba(201, 201, 201, 1); 
+}  
+
+/* Individual icon link styling */
+.icons a {     
+    position: relative;     
+    text-decoration: none;     
+    color: rgba(69, 69, 69, 1);     
+    font-size: 17px;     
+    background-color: #fff;     
+    padding: 5px;     
+    border-radius: 6px;     
+    display: inline-flex;     
+    align-items: center;     
+    justify-content: center; 
+}  
+
+/* Notification badge styling */
+.icons .badge {     
+    position: absolute;     
+    top: -2px;     
+    right: -3px;     
+    background-color: red;     
+    font-size: 10px;     
+    font-weight: bold;     
+    padding: 2px 5px;     
+    border-radius: 50%;     
+    min-width: 16px;     
+    height: 16px;     
+    display: flex;     
+    align-items: center;     
+    justify-content: center; 
+}  
+
+/* Image border radius */
+img {     
+    border-radius: 8px; 
+}  
+
+/* Small circle icon positioning */
+.fa-circle {     
+    top: 40px;     
+    right: -3px;     
+    font-size: 10px; 
+}  
+
+/* Header text styling */
+header p {     
+    font-size: 16px;     
+    font-weight: 700;     
+    font-family: "Manrope", sans-serif; 
+}  
+
+/* Header span text styling */
+header span {     
+    font-size: 12px;     
+    font-weight: 400;     
+    color: rgba(114, 114, 114, 1); 
+}  
+
+/* Profile card second div line height */
+.profile-card div:nth-child(2) {     
+    line-height: 3px; 
+}  
+
+/* All products section styling */
+#all-product {     
+    padding: 20px;     
+    background-color: #fff; 
+}  
+
+/* Top div styling */
+.top-div {     
+    line-height: 0; 
+}  
+
+/* Top div paragraph styling */
+.top-div p {     
+    font-weight: 600;     
+    font-size: 20px; 
+}  
+
+/* Top div link styling */
+.top-div a {     
+    text-decoration: none; 
+}  
+
+/* Top div link icon and span color */
+.top-div a span, .top-div a i {     
+    color: rgba(136, 136, 136, 1);  
+}  
+
+/* Top div last span color */
+.top-div a span:last-of-type {     
+    color: #0D9488; 
+}  
+
+/* Product container styling */
+.product-contenair {     
+    background-color: #0D9488;     
+    padding: 20px;     
+    border: 1px black solid;     
+    border-radius: 8px; 
+}  
+
+/* Form input width inside product container */
+.product-contenair form input {     
+    width: 50%; 
+}  
+
+/* Search icon positioning inside product container */
+.product-contenair .fa-magnifying-glass {     
+    top: 10px;     
+    left: 48%; 
+}  
+
+/* ===== Responsive for Tablet ===== */
+@media (min-width: 768px) and (max-width:991px) {        
+
+    /* Logo heading smaller font */
+    .logo-container h2 {         
+        font-size: 22px;     
+    }     
+
+    /* Hide logout icon */
+    .fa-right-from-bracket {         
+        display: none;     
+    }     
+
+    /* Smaller logo size */
+    .logo {         
+        width: 30px;         
+        height: 30px;         
+        font-size: 30px;     
+    }     
+
+    /* Hide logo decorative line */
+    .logo::after {       
+        display: none;     
+    }     
+
+    /* Smaller font for sidebar span */
+    ul li span {         
+        font-size: 12px;     
+    }     
+}   
+
+/* ===== Responsive for Mobile ===== */
+@media (min-width:320px) and (max-width: 767px) {          
+
+    /* Hide logo heading */
+    .logo-container h2 {         
+        display: none;      
+    }      
+
+    /* Smaller logo size */
+    .logo {         
+        width: 35px;         
+        height: 35px;         
+        font-size: 24px;     
+    }     
+
+    /* Hide logo decorative line */
+    .logo::after {         
+        display: none;     
+    }      
+
+    /* Smaller icons */
+    .icons a {         
+        font-size: 14px;         
+        padding: 3px;     
+    }     
+
+    /* Hide sidebar spans */
+    ul li span {         
+        display: none;     
+    }     
+
+    /* Smaller sidebar paragraph */
+    #sidebar p {         
+        font-size: 10px;     
+    }     
+
+    /* Remove hover background on sidebar items */
+    ul li:hover {         
+        background-color: transparent;     
+    }     
+
+    /* Hide search icon */
+    .fa-magnifying-glass {     
+        display: none;     
+    }     
+
+    /* Dashboard paragraph smaller font */
+    #dashboard p {     
+        font-size: 10px;     
+        line-height: 10px;     
+    } 
+} 
+
+.title{
+    margin-top: 10px;
+    margin-left: 20%;
+}
+.container {
+    background: #fff;
+    padding: 20px;
+   margin-left: 18%;
+    max-width: 1200px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.breadcrumb {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.breadcrumb span {
+    color: #0A766D;
+}
+
+/* Top bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.top-bar input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-outline {
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Search box */
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 40px 10px 12px; 
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.search-box i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 14px;
+    pointer-events: none; 
+}
+
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tab {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
+
+.tab.active {
+    background: #dff1ef;
+    color: #0A766D;
+}
+
+/*Table Wrapper*/
+.table-wrapper {
+    background: #fff;
+    border-radius: 14px;
+    overflow-x: auto;
+    border: 1px solid #eee;
+}
+
+/*Table*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f9fafb;
+}
+tbody tr {
+    line-height: 1.4;
+}
+th, td {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+     vertical-align: middle;
+}
+
+th {
+    color: #6b7280;
+    font-weight: 600;
+}
+
+tbody tr:hover {
+    background: #e3e5e7;
+}
+
+/*Orders Column*/
+.order {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-text {
+    display: flex;
+    flex-direction: column; 
+    line-height: 1.2;
+}
+
+.order-text span {
+    color: #10b981;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.order-text p {
+    font-size: 14px;
+    margin: 0;
+     color: #111827;
+}
+
+.order img {
+    width: 36px;
+    height: 36px;
+  
+    object-fit: cover;
+}
+
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #0A766D;
+}
+
+/*Badges*/
+.badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Payment */
+.paid {
+    background: #e7f7f2;
+    color: #0f766e;
+}
+
+.unpaid {
+    background: #fff3cd;
+    color: #d97706;
+}
+
+/* Status */
+.shipping {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.cancelled {
+    background: #ffe4e6;
+    color: #be123c;
+}
+
+/*Action Icons*/
+.icons {
+    display: flex;
+    gap: 16px;
+    color: #6b7280;
+    font-size: 16px;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.icons i {
+    cursor: pointer;
+    transition: 0.2s;
+    
+}
+
+.icons i:hover {
+    color: #0f766e;
+}
+
+/*Checkbox*/
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+
+
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #454545;
+}
+
+.page-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-count {
+    color: #454545;
+}
+.nav-btn {
+    background: none;
+    border: 1px solid #9ca3af;;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    color: #9ca3af;
+    font-size: 16px;
+   
+    
+    transition: color 0.2s;
+}
+
+.nav-btn:hover {
+    color: #0A766D;
+}
+
+.select {
+     background: none;
+    border: 1px solid #9ca3af;;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    color: #9ca3af;
+    font-size: 16px;
+   
+    
+    transition: color 0.2s;
+}
+
+
+/*DARK MODE*/
+body.dark-mode {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+/* Header */
+body.dark-mode header {
+  background-color: #020617;
+}
+
+/* Sidebar */
+body.dark-mode #sidebar {
+  background-color: #020617;
+}
+
+body.dark-mode #sidebar h2,
+body.dark-mode #sidebar p,
+body.dark-mode #sidebar span,
+body.dark-mode #sidebar i {
+  color: #e5e7eb;
+}
+
+/* Dashboard main */
+body.dark-mode #dashboard {
+  background-color: #0f172a;
+}
+
+/* Search inputs */
+body.dark-mode input,
+body.dark-mode select {
+  background-color: #020617;
+  color: #e5e7eb;
+  border-color: #1e293b;
+}
+body.dark-mode .order .order-text p {
+    color: #fff;
+}
+
+/* Profile name */
+body.dark-mode .profile-card p,
+body.dark-mode .profile-card span {
+  color: #e5e7eb !important;
+}
+body.dark-mode  .icons a i{
+    color: #020617;
+}
+body.dark-mode .top-bar button i,
+body.dark-mode .top-bar button{
+    color: #020617;
+}
+/* Tables */
+body.dark-mode .table-wrapper {
+  background-color: #020617;
+}
+
+body.dark-mode table {
+  color: #e5e7eb;
+}
+
+body.dark-mode thead {
+  background-color: #020617;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+  border-color: #1e293b;
+}
+
+/* Tabs */
+body.dark-mode .tabs .tab {
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+body.dark-mode .tabs .tab.active {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+/* Buttons */
+body.dark-mode .btn-outline {
+  border-color: #1e293b;
+  color: #e5e7eb;
+}
+
+/* Badges */
+body.dark-mode .badge {
+  background-color: #1e293b;
+}
+
+/* Icons */
+body.dark-mode i {
+  color: #e5e7eb;
+}
+
+/* Pagination */
+body.dark-mode .pagination {
+  color: #e5e7eb;
+}
+
+/*Hamburger button */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #0A766D;
+}
+
+/* Tablet (medium)*/
+@media (max-width: 991px) {
+  .hamburger-btn {
+    display: block;
+    position: fixed;
+    top: 22px;
+    left: 20px;
+    z-index: 3000;
+  }
+
+  /* sidebar*/
+  #sidebar {
+    width: 80px;
+  }
+
+  header {
+    left: 80px;
+    width: calc(100% - 80px);
+    padding-left: 70px;
+  }
+
+  .container,
+  .title {
+    margin-left: 100px;
+  }
+}
+
+/* Mobile  */
+@media (max-width: 767px) {
+
+  /* sidebar hidden by default */
+  #sidebar {
+      width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0A766D;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 3000;
+  }
+
+  #sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* header */
+  header {
+    left: 0;
+    width: 100%;
+    padding-left: 70px; 
+  }
+
+  /* content */
+  .container,
+  .title {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 800px;
+  }
+}
+

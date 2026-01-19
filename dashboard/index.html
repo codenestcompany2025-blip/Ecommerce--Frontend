@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+     rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- aside start -->
+        <aside id="sidebar" class="px-2 py-2">
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <div class="logo-container d-flex align-items-center">
+                    <div class="logo">E</div>
+                    <h2 class="m-0">commerce</h2>
+                </div>
+                <a href=""><i class="fa-solid fa-right-from-bracket text-white"></i></a>
+            </div>
+            <div class="w-100 p-2">
+                <p class="m-2">GENERAL</p>
+                <ul class="list-unstyled ps-2 m-2">
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-regular fa-house"></i></a><span
+                            class="fw-light">Dashboard</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-store"></i>
+                        </a><span class="fw-light">Products (119)</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-table-cells-large"></i>
+                        </a><span class="fw-light">Categories</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-regular fa-file-lines"></i>
+                        </a><span class="fw-light">Orders</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-user-group"></i>
+                        </a><span class="fw-light">Customers</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-arrow-trend-up"></i>
+                        </a><span class="fw-light">Sales Report</span></li>
+                </ul>
+                <p class="m-2">WebSite</p>
+                <ul class="list-unstyled ps-2 m-2">
+                    <li class="d-flex align-items-center gap-2"><a href=""><i
+                                class="fa-solid fa-house-chimney-window"></i></a><span class="fw-light">Home</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-regular fa-credit-card"></i>
+                        </a><span class="fw-light">Payment</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-circle-info"></i>
+                        </a><span class="fw-light">About</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-phone"></i>
+                        </a><span class="fw-light">Contact Setting</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-regular fa-comment-dots"></i>
+                        </a><span class="fw-light">FAQ </span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-regular fa-truck"></i>
+                        </a><span class="fw-light">Order Tracking</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-filter"></i>
+                        </a><span class="fw-light">Filter</span></li>
+
+                </ul>
+                <p class="m-2">TOOIS</p>
+                <ul class="list-unstyled ps-2 m-2">
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-gear"></i></a><span
+                            class="fw-light">Settings</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-regular fa-circle-question"></i>
+                        </a><span class="fw-light">Help</span></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- asaide end -->
+         <!-- main start -->
+        <main id="dashboard">
+            <header class="d-flex justify-content-between align-items-center">
+                <!-- hamberger btn-->
+               <button class="hamburger-btn">
+                     <i class="fa-solid fa-bars"></i>
+               </button>
+               <div id="overlay"></div>
+
+                <form class="position-relative" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search product" aria-label="Search">
+                    <a href="" class="text-black"><i class="fa-solid fa-magnifying-glass position-absolute "></i></a>
+                </form>
+                <div class="d-flex gap-4 align-items-center">
+                    <div class="icons d-flex gap-2">
+                        <a href="#" id="darkModeToggle"><i class="fa-solid fa-moon" ></i></a>
+
+                        <a href=""><i class="fa-regular fa-envelope"><span class="badge text-white">2</span></i></a>
+                        <a href=""><i class="fa-regular fa-bell"></i><span class="badge text-white">8</span></a>
+
+                    </div>
+                    <div class="profile-card d-flex align-items-center gap-3">
+                        <div class="position-relative "><img src="images/9ef8cb329b949267cc8214b6727067c4a13af4b4.png"
+                                width="50px" height="50px" alt="">
+                            <i class="fa-solid fa-circle fa-beat text-success position-absolute"></i>
+                        </div>
+                        <div>
+                            <p class="text-black">Guy Hawkins</p>
+                            <span>Admin</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </header>
+           <div class="dashboard-header mb-3">
+                <h1 class="mb-1">Dashboard</h1>
+               <span class="text-muted">dashboard</span>
+            </div>
+<!-- Cards -->
+
+<div class="cards">
+    
+    <!-- Card 1 -->
+    <div class="card">
+        <p class="card-title">
+            Total Order
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </p>
+        <div class="card-bottom">
+            <h2 class="card-value">$8100</h2>
+            <div class="card-stats">
+                <span class="stat-change positive">
+                    <i class="fa-solid fa-arrow-trend-up"></i> 10.6%
+                </span>
+                <span class="stat-text">from last week</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <p class="card-title">
+            Total Customer
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </p>
+        <div class="card-bottom">
+            <h2 class="card-value">$5000</h2>
+            <div class="card-stats">
+                <span class="stat-change positive">
+                    <i class="fa-solid fa-arrow-trend-up"></i> 1.5%
+                </span>
+                <span class="stat-text">from last week</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <p class="card-title">
+            Total Transactions
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </p>
+        <div class="card-bottom">
+            <h2 class="card-value">$1200</h2>
+            <div class="card-stats">
+                <span class="stat-change positive">
+                    <i class="fa-solid fa-arrow-trend-up"></i> 3.6%
+                </span>
+                <span class="stat-text">from last week</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+        <p class="card-title">
+            Total Products
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </p>
+        <div class="card-bottom">
+            <h2 class="card-value">$500</h2>
+            <div class="card-stats">
+                <span class="stat-change negative">
+                    <i class="fa-solid fa-arrow-trend-down"></i> 1.5%
+                </span>
+                <span class="stat-text">from last week</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+            <!-- Charts -->
+            <div class="chart-container-wrapper">
+                <div class="chart-container">
+                    
+                    <div class="time-filters d-flex justify-content-between">
+                      <div> <h3>Report</h3></div>
+                     <div>
+                         <button>1D</button>
+                        <button>1W</button>
+                        <button class="active">1M</button>
+                        <button>3M</button>
+                        <button>6M</button>
+                     </div>
+                        
+                    </div>
+                    <canvas id="lineChart"></canvas>
+                    
+                </div>
+                <div class="chart-container">
+                    <h3 class="d-flex justify-content-center align-items-center ">Total Revenue</h3>
+                    <canvas id="pieChart"></canvas>
+                    <div class="legend">
+                        <span><span class="color paid"></span> Paid Ads</span>
+                        <span><span class="color direct"></span> Direct & Other</span>
+                        <span><span class="color organic"></span> Organic Search</span>
+                    </div>
+                </div>
+            </div>
+         <!--Products-table-->
+            <div class="tables-wrapper mt-5">
+          <!-- Product Out Of Stock -->
+                <div class="table-container">
+                       <h3>Product Out Of Stock</h3>
+                       <table>
+                          <thead>
+                            <tr>
+                              <th>Product</th>
+                              <th>Quantity Expiry Date</th>
+                           </tr>
+                         </thead>
+                        <tbody>
+                               <tr>
+                                 <td><img src="images/image 19.png" alt="">Camera (Black)</td>
+                                  <td>3/5/2025</td>
+                              </tr>
+                              <tr>
+                                 <td><img src="images/image 19 (1).png" alt="">Headphone (White)</td>
+                                 <td>3/5/2025</td>
+                             </tr>
+                              <tr>
+                                  <td><img src="images/40c6f71048d10f855af84b3205954bf74bd775a0.png" alt="">Laptop (white)</td>
+                                   <td>3/5/2025</td>
+                              </tr>
+                              <tr>
+                                  <td><img src="images/2aa47b65b0fbed9d6ff12b33e40132bd56c0b19b.png" alt="">Laptop (Red)</td>
+                                   <td>3/5/2025</td>
+                              </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                 <!-- Product Popular -->
+               <div class="table-container">
+                  <div class="d-flex justify-content-between">
+                     <h3>Product Popular</h3>
+                   <span><a href="#" style="color: #000; text-decoration: none;">Show all  <i class="fa-solid fa-arrow-up-right-from-square"></i> </a></span>
+                  </div>
+                   <table>
+                      <thead>
+                         <tr>
+                           <th>Product</th>
+                           <th>Price</th>
+                           <th>Sales</th>
+                           <th>Status</th>
+                         </tr>
+                     </thead>
+                   <tbody>
+                        <tr>
+                             <td><img src="images/image 19.png" alt="">Camera (Black)</td>
+                             <td>$20.00</td>
+                             <td>3000</td>
+                             <td><span class="status-active">Active</span></td>
+                        </tr>
+                        <tr>
+                              <td><img src="images/image 19 (1).png" alt="">Headphone (White)</td>
+                              <td>$20.00</td>
+                              <td>2311</td>
+                              <td><span class="status-active">Active</span></td>
+                        </tr>
+                        <tr>
+                              <td><img src="images/40c6f71048d10f855af84b3205954bf74bd775a0.png" alt="">Laptop (White)</td>
+                              <td>$20.00</td>
+                              <td>2111</td>
+                              <td><span class="status-active">Active</span></td>
+                        </tr>
+                         <tr>
+                              <td><img src="images/2aa47b65b0fbed9d6ff12b33e40132bd56c0b19b.png" alt="">Laptop (Red)</td>
+                              <td>$20.00</td>
+                              <td>1661</td>
+                              <td><span class="status-active">Active</span></td>
+                         </tr>
+                  </tbody>
+              </table>
+            </div>
+       
+
+
+        </main>
+        <!-- main end -->
+
+    </div>
+
+
+
+   <script src="js/jQuere.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
