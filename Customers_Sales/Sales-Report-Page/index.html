@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Report</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* تعديل بسيط لجعل الشارت يظهر بشكل أفضل جنب الكروت */
+      .report-container {
+        min-height: 380px;
+      }
+      @media (min-width: 1024px) {
+        .report-container {
+          min-width: 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="d-flex">
+      <!-- السايدبار كاملة بدون تغيير -->
+      <aside id="sidebar" class="px-2 py-2">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <div class="logo-container d-flex align-items-center">
+            <div class="logo">E</div>
+            <h2 class="m-0">commerce</h2>
+          </div>
+          <a href=""
+            ><i class="fa-solid fa-right-from-bracket text-white"></i
+          ></a>
+        </div>
+        <div class="w-100 p-2">
+          <p class="m-2">GENERAL</p>
+          <ul class="list-unstyled ps-2 m-2">
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-regular fa-house"></i></a
+              ><span class="fw-light">Dashboard</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-store"></i></a
+              ><span class="fw-light">Products (119)</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-table-cells-large"></i></a
+              ><span class="fw-light">Categories</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-regular fa-file-lines"></i></a
+              ><span class="fw-light">Orders</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-user-group"></i></a
+              ><span class="fw-light">Customers</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-arrow-trend-up"></i></a
+              ><span class="fw-light">Sales Report</span>
+            </li>
+          </ul>
+          <p class="m-2">WebSite</p>
+          <ul class="list-unstyled ps-2 m-2">
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-house-chimney-window"></i></a
+              ><span class="fw-light">Home</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-regular fa-credit-card"></i></a
+              ><span class="fw-light">Payment</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-circle-info"></i></a
+              ><span class="fw-light">About</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-phone"></i></a
+              ><span class="fw-light">Contact Setting</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-regular fa-comment-dots"></i></a
+              ><span class="fw-light">FAQ </span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-regular fa-truck"></i></a
+              ><span class="fw-light">Order Tracking</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-filter"></i></a
+              ><span class="fw-light">Filter</span>
+            </li>
+          </ul>
+          <p class="m-2">TOOIS</p>
+          <ul class="list-unstyled ps-2 m-2">
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-gear"></i></a
+              ><span class="fw-light">Settings</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-regular fa-circle-question"></i></a
+              ><span class="fw-light">Help</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <main id="dashboard" class="w-100">
+        <header class="d-flex justify-content-between align-items-center">
+          <button class="hamburger-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div id="overlay"></div>
+          <form class="position-relative" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search product"
+              aria-label="Search"
+            />
+            <a href="" class="text-black"
+              ><i class="fa-solid fa-magnifying-glass position-absolute"></i
+            ></a>
+          </form>
+          <div class="d-flex gap-4 align-items-center">
+            <div class="icons d-flex gap-2">
+              <a href="#" id="darkModeToggle"
+                ><i class="fa-solid fa-moon"></i
+              ></a>
+              <a href=""
+                ><i class="fa-regular fa-envelope"
+                  ><span class="badge text-white">2</span></i
+                ></a
+              >
+              <a href=""
+                ><i class="fa-regular fa-bell"></i
+                ><span class="badge text-white">8</span></a
+              >
+            </div>
+            <div class="profile-card d-flex align-items-center gap-3">
+              <div class="position-relative">
+                <img
+                  src="images/9ef8cb329b949267cc8214b6727067c4a13af4b4.png"
+                  width="50px"
+                  height="50px"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-circle fa-beat text-success position-absolute"
+                ></i>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-black mb-4">Guy Hawkins</p>
+                <span>Admin</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="bg-[#FFFFFF] w-full">
+          <div class="">
+            <div
+              class="flex justify-start items-start flex-col px-[32px] py-[23px]"
+            >
+              <h1 class="font-[600] text-[24px] text-[#2A2A2A] mb-[8px]">
+                Sales Report
+              </h1>
+              <div class="flex justify-start items-center gap-[5px]">
+                <p class="font-[400] text-[16px] text-[#888888]">Dashboard</p>
+                <img src="icon/Vector.svg" alt="" />
+                <p class="font-[700] text-[16px] text-[#888888]">
+                  Sales Report
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-wrap justify-start items-stretch w-full gap-6 px-[40px] py-[24px]"
+            >
+              <div
+                class="bg-teal-600 rounded-2xl p-5 shadow-lg w-80 max-w-sm text-white flex-1 min-w-[260px]"
+              >
+                <div class="flex justify-between items-center mb-8">
+                  <h3 class="text-[16px] font-[600] text-[#FFFFFF]">
+                    Total Sales Today
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 text-white/80"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </div>
+                <div class="flex flex-col justify-between h-full pb-1">
+                  <div class="flex justify-between items-end pb-2">
+                    <p
+                      class="font-jakarta text-[30px] font-[700] text-[#FFFFFF]"
+                    >
+                      $8100
+                    </p>
+                    <div class="text-right flex flex-col items-end">
+                      <div class="flex items-center gap-1 mb-1">
+                        <img
+                          src="icon/Trending Up.svg"
+                          alt="up"
+                          class="w-5 h-5"
+                        />
+                        <p class="text-[#09DE13] text-[20px] font-[700]">
+                          10.6%
+                        </p>
+                      </div>
+                      <p class="text-[#F6F6F6] text-[14px] font-normal">
+                        From last week
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-[#E7E7E7] rounded-2xl p-5 shadow-lg w-80 max-w-sm flex-1 min-w-[260px]"
+              >
+                <div class="flex justify-between items-center mb-8">
+                  <h3 class="text-[16px] font-[600] text-[#454545]">
+                    Total Order
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 text-[#454545]"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </div>
+                <div class="flex flex-col justify-between h-full pb-1">
+                  <div class="flex justify-between items-end pb-2">
+                    <p
+                      class="font-jakarta text-[30px] font-[700] text-[#0D9488]"
+                    >
+                      5000
+                    </p>
+                    <div class="text-right flex flex-col items-end">
+                      <div class="flex items-center gap-1 mb-1">
+                        <img src="icon/Group.svg" alt="up" class="w-5 h-5" />
+                        <p class="text-[#04910C] text-[20px] font-[700]">
+                          1.5%
+                        </p>
+                      </div>
+                      <p class="text-[#737373] text-[14px] font-normal">
+                        From last week
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-[#E7E7E7] rounded-2xl p-5 shadow-lg w-80 max-w-sm flex-1 min-w-[260px]"
+              >
+                <div class="flex justify-between items-center mb-8">
+                  <h3 class="text-[16px] font-[600] text-[#454545]">
+                    Average order value
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 text-[#454545]"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </div>
+                <div class="flex flex-col justify-between h-full pb-1">
+                  <div class="flex justify-between items-end pb-2">
+                    <p
+                      class="font-jakarta text-[30px] font-[700] text-[#0D9488]"
+                    >
+                      12000
+                    </p>
+                    <div class="text-right flex flex-col items-end">
+                      <div class="flex items-center gap-1 mb-1">
+                        <img src="icon/Group.svg" alt="up" class="w-5 h-5" />
+                        <p class="text-[#04910C] text-[20px] font-[700]">
+                          3.6%
+                        </p>
+                      </div>
+                      <p class="text-[#737373] text-[14px] font-normal">
+                        From last week
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-[#E7E7E7] rounded-2xl p-5 shadow-lg w-80 max-w-sm flex-1 min-w-[260px]"
+              >
+                <div class="flex justify-between items-center mb-8">
+                  <h3 class="text-[16px] font-[600] text-[#454545]">
+                    Sales Growth%
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 text-[#454545]"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </div>
+                <div class="flex flex-col justify-between h-full pb-1">
+                  <div class="flex justify-between items-end pb-2">
+                    <p
+                      class="font-jakarta text-[30px] font-[700] text-[#0D9488]"
+                    >
+                      5%
+                    </p>
+                    <div class="text-right flex flex-col items-end">
+                      <div class="flex items-center gap-1 mb-1">
+                        <img src="icon/Group2.svg" alt="up" class="w-5 h-5" />
+                        <p class="text-[#FF0000] text-[20px] font-[700]">
+                          -1.5%
+                        </p>
+                      </div>
+                      <p class="text-[#737373] text-[14px] font-normal">
+                        From last week
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-[50px] py-[30px]">
+              <div
+                class="bg-[#ffffff] rounded-3xl shadow-sm px-[30px] w-full mb-[32px]"
+              >
+                <div
+                  class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6"
+                >
+                  <h2 class="text-2xl font-semibold text-gray-800">Report</h2>
+                  <div class="flex gap-2 flex-wrap">
+                    <button
+                      class="px-4 py-1.5 text-sm rounded-md text-gray-600 hover:bg-gray-100 transition"
+                    >
+                      1D
+                    </button>
+                    <button
+                      class="px-4 py-1.5 text-sm rounded-md text-gray-600 hover:bg-gray-100 transition"
+                    >
+                      1W
+                    </button>
+                    <button
+                      class="px-4 py-1.5 text-sm rounded-md bg-teal-600 text-white font-medium"
+                    >
+                      1M
+                    </button>
+                    <button
+                      class="px-4 py-1.5 text-sm rounded-md text-gray-600 hover:bg-gray-100 transition"
+                    >
+                      6M
+                    </button>
+                    <button
+                      class="px-4 py-1.5 text-sm rounded-md text-gray-600 hover:bg-gray-100 transition"
+                    >
+                      3M
+                    </button>
+                  </div>
+                </div>
+                <div class="w-full h-[380px] md:h-[420px] lg:h-[450px]">
+                  <canvas id="myChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-[50px] py-[20px]">
+            <div
+              class="bg-[#ffffff] rounded-3xl shadow-sm px-[30px] w-full mb-[32px]"
+            >
+              <div class="py-[23px] rounded-lg">
+                <div class="flex justify-start items-start gap-[366px]">
+                  <div class="w-full flex justify-between items-center">
+                    <div class="relative w-64 w-[600px]">
+                      <p class="text-[#000000] font[700] text-[30px]">Report</p>
+                    </div>
+
+                    <div class="flex items-center gap-[12px] w-3/2">
+                      <button
+                        class="flex items-center gap-2 px-4 py-2 border rounded-lg text-[#454545] font[700] text-[12px]"
+                      >
+                        Filter
+                        <img
+                          src="icon/filter.svg"
+                          alt="Filter"
+                          class="w-4 h-4"
+                        />
+                      </button>
+
+                      <div class="bg-[#0D9488] border rounded-lg">
+                        <button
+                          class="flex items-center gap-2 px-4 py-2 text-sm text-[#FFFFFF] font[700] text-[12px]"
+                        >
+                          Export
+                          <img
+                            src="icon/export.svg"
+                            alt="Export"
+                            class="w-4 h-4"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full py-8">
+                  <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <div class="overflow-x-auto">
+                      <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-100">
+                          <tr>
+                            <th
+                              class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200"
+                            >
+                              <div class="flex items-center gap-2">
+                                <span class="text-[#454545] font-medium text-sm"
+                                  >Orders ID</span
+                                >
+                                <div class="flex flex-col">
+                                  <svg
+                                    class="w-3 h-3 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="3"
+                                      d="M5 15l7-7 7 7"
+                                    />
+                                  </svg>
+                                  <svg
+                                    class="w-3 h-3 -mt-1 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="3"
+                                      d="M19 9l-7 7-7-7"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200"
+                            >
+                              <div class="flex items-center gap-2">
+                                <span class="text-[#454545] font-medium text-sm"
+                                  >Customer</span
+                                >
+                                <div class="flex flex-col">
+                                  <svg
+                                    class="w-3 h-3 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="3"
+                                      d="M5 15l7-7 7 7"
+                                    />
+                                  </svg>
+                                  <svg
+                                    class="w-3 h-3 -mt-1 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="3"
+                                      d="M19 9l-7 7-7-7"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200"
+                            >
+                              <div class="flex items-center gap-2">
+                                <span class="text-[#454545] font-medium text-sm"
+                                  >Price</span
+                                >
+                                <div class="flex flex-col">
+                                  <svg
+                                    class="w-3 h-3 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="3"
+                                      d="M5 15l7-7 7 7"
+                                    />
+                                  </svg>
+                                  <svg
+                                    class="w-3 h-3 -mt-1 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="3"
+                                      d="M19 9l-7 7-7-7"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200"
+                            >
+                              <div class="flex items-center gap-2">
+                                <span class="text-[#454545] font-medium text-sm"
+                                  >Date</span
+                                >
+                                <div class="flex flex-col">
+                                  <svg
+                                    class="w-3 h-3 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="3"
+                                      d="M5 15l7-7 7 7"
+                                    />
+                                  </svg>
+                                  <svg
+                                    class="w-3 h-3 -mt-1 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="3"
+                                      d="M19 9l-7 7-7-7"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200"
+                            >
+                              <div class="flex items-center gap-2">
+                                <span class="text-[#454545] font-medium text-sm"
+                                  >Payment</span
+                                >
+                                <div class="flex flex-col">
+                                  <svg
+                                    class="w-3 h-3 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="3"
+                                      d="M5 15l7-7 7 7"
+                                    />
+                                  </svg>
+                                  <svg
+                                    class="w-3 h-3 -mt-1 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="3"
+                                      d="M19 9l-7 7-7-7"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                            </th>
+                            <th
+                              class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                            >
+                              <div class="flex items-center gap-2">
+                                <span class="text-[#454545] font-medium text-sm"
+                                  >Status</span
+                                >
+                                <div class="flex flex-col">
+                                  <svg
+                                    class="w-3 h-3 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="3"
+                                      d="M5 15l7-7 7 7"
+                                    />
+                                  </svg>
+                                  <svg
+                                    class="w-3 h-3 -mt-1 text-gray-400"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="3"
+                                      d="M19 9l-7 7-7-7"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                          <tr class="hover:bg-gray-50">
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm font-medium text-[#454545]">
+                                #1001
+                              </p>
+                            </td>
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm font-medium text-[#454545]">
+                                Leslie Alexander
+                              </p>
+                            </td>
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm font-semibold text-[#454545]">
+                                $21.78
+                              </p>
+                            </td>
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm text-[#454545]">04/17/23</p>
+                            </td>
+                            <td class="px-6 py-4 border-r border-gray-200">
+                              <span
+                                class="inline-block px-4 py-2 rounded-full bg-[#CFEAE7] text-[#053B36] text-sm font-medium"
+                              >
+                                Paid
+                              </span>
+                            </td>
+                            <td class="px-6 py-4">
+                              <span
+                                class="inline-block px-4 py-2 rounded-full bg-[#CFEAE7] text-[#053B36] text-sm font-medium"
+                              >
+                                Shipping
+                              </span>
+                            </td>
+                          </tr>
+                          <tr class="hover:bg-gray-50">
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm font-medium text-[#454545]">
+                                #1001
+                              </p>
+                            </td>
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm font-medium text-[#454545]">
+                                Leslie Alexander
+                              </p>
+                            </td>
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm font-semibold text-[#454545]">
+                                $21.78
+                              </p>
+                            </td>
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm text-[#454545]">04/17/23</p>
+                            </td>
+                            <td class="px-6 py-4 border-r border-gray-200">
+                              <span
+                                class="inline-block px-4 py-2 rounded-full bg-[#CFEAE7] text-[#053B36] text-sm font-medium"
+                              >
+                                Paid
+                              </span>
+                            </td>
+                            <td class="px-6 py-4">
+                              <span
+                                class="inline-block px-4 py-2 rounded-full bg-[#CFEAE7] text-[#053B36] text-sm font-medium"
+                              >
+                                Shipping
+                              </span>
+                            </td>
+                          </tr>
+                          <tr class="hover:bg-gray-50">
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm font-medium text-[#454545]">
+                                #1001
+                              </p>
+                            </td>
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm font-medium text-[#454545]">
+                                Leslie Alexander
+                              </p>
+                            </td>
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm font-semibold text-[#454545]">
+                                $21.78
+                              </p>
+                            </td>
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm text-[#454545]">04/17/23</p>
+                            </td>
+                            <td class="px-6 py-4 border-r border-gray-200">
+                              <span
+                                class="inline-block px-4 py-2 rounded-full bg-[#CFEAE7] text-[#053B36] text-sm font-medium"
+                              >
+                                Paid
+                              </span>
+                            </td>
+                            <td class="px-6 py-4">
+                              <span
+                                class="inline-block px-4 py-2 rounded-full bg-[#CFEAE7] text-[#053B36] text-sm font-medium"
+                              >
+                                Shipping
+                              </span>
+                            </td>
+                          </tr>
+                          <tr class="hover:bg-gray-50">
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm font-medium text-[#454545]">
+                                #1001
+                              </p>
+                            </td>
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm font-medium text-[#454545]">
+                                Leslie Alexander
+                              </p>
+                            </td>
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm font-semibold text-[#454545]">
+                                $21.78
+                              </p>
+                            </td>
+                            <td
+                              class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                            >
+                              <p class="text-sm text-[#454545]">04/17/23</p>
+                            </td>
+                            <td class="px-6 py-4 border-r border-gray-200">
+                              <span
+                                class="inline-block px-4 py-2 rounded-full bg-[#CFEAE7] text-[#053B36] text-sm font-medium"
+                              >
+                                Paid
+                              </span>
+                            </td>
+                            <td class="px-6 py-4">
+                              <span
+                                class="inline-block px-4 py-2 rounded-full bg-[#CFEAE7] text-[#053B36] text-sm font-medium"
+                              >
+                                Shipping
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div
+                      class="bg-gray-50 px-6 py-6 flex items-center justify-between border-t border-gray-200 gap-1"
+                    >
+                      <p class="text-sm text-[#737373]">
+                        <span class="font-bold text-[#0A766D]">1</span> - 10 of
+                        13 Pages
+                      </p>
+                      <div class="flex items-center gap-4">
+                        <span class="text-sm text-[#737373]">The page on</span>
+                        <select
+                          class="border border-gray-300 rounded-md px-3 py-2 text-sm"
+                        >
+                          <option>1</option>
+                        </select>
+                        <button
+                          class="p-2 rounded-lg border border-gray-300 hover:bg-gray-100"
+                        >
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 19l-7-7 7-7"
+                            />
+                          </svg>
+                        </button>
+                        <button
+                          class="p-2 rounded-lg border border-gray-300 hover:bg-gray-100"
+                        >
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- أول حاجة: مكتبة Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- بعدين الكود بتاعك كامل (الـ checkboxes + الشارت) -->
+    <script>
+      // تحديد الكل / إلغاء التحديد
+      const selectAll = document.getElementById("select-all");
+      const rowCheckboxes = document.querySelectorAll(".row-checkbox");
+
+      if (selectAll && rowCheckboxes.length > 0) {
+        selectAll.addEventListener("change", function () {
+          rowCheckboxes.forEach((cb) => (cb.checked = this.checked));
+        });
+
+        rowCheckboxes.forEach((cb) => {
+          cb.addEventListener("change", () => {
+            const allChecked = [...rowCheckboxes].every((c) => c.checked);
+            const someChecked = [...rowCheckboxes].some((c) => c.checked);
+            selectAll.checked = allChecked;
+            selectAll.indeterminate = someChecked && !allChecked;
+          });
+        });
+      }
+
+      // الشارت – نضمن إنه يشتغل بعد تحميل الصفحة
+      window.addEventListener("load", function () {
+        const canvas = document.getElementById("myChart");
+        if (!canvas) {
+          console.error("Canvas element #myChart not found!");
+          return;
+        }
+
+        const ctx = canvas.getContext("2d");
+        new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+              "Nov",
+              "Dec",
+            ],
+            datasets: [
+              {
+                data: [
+                  20000, 15000, 40000, 80000, 60000, 120000, 140000, 110000,
+                  80000, 90000, 120000, 130000,
+                ],
+                borderColor: "#0d9488",
+                backgroundColor: "rgba(13, 148, 136, 0.08)",
+                tension: 0.4,
+                fill: true,
+                pointRadius: 0,
+                borderWidth: 3,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { grid: { display: false }, ticks: { color: "#6b7280" } },
+              y: {
+                grid: { color: "#f3f4f6" },
+                ticks: {
+                  color: "#6b7280",
+                  callback: (value) => value / 1000 + "k",
+                },
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      });
+    </script>
+
+    <!-- بعدين السكريبتات التانية -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
