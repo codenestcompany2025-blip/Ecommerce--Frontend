@@ -1,0 +1,1132 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Customer Dashboard</title>
+    ```
+  </head>
+
+  <body>
+    <div class="d-flex">
+      ```
+      <!-- ========== SIDEBAR ========== -->
+      <aside id="sidebar" class="px-2 py-2">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <div class="logo-container d-flex align-items-center">
+            <div class="logo">E</div>
+            <h2 class="m-0">commerce</h2>
+          </div>
+          <a href=""
+            ><i class="fa-solid fa-right-from-bracket text-white"></i
+          ></a>
+        </div>
+        <div class="w-100 p-2">
+          <p class="m-2">GENERAL</p>
+          <ul class="list-unstyled ps-2 m-2">
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-regular fa-house"></i></a
+              ><span class="fw-light">Dashboard</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-store"></i> </a
+              ><span class="fw-light">Products (119)</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-table-cells-large"></i> </a
+              ><span class="fw-light">Categories</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-regular fa-file-lines"></i> </a
+              ><span class="fw-light">Orders</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-user-group"></i> </a
+              ><span class="fw-light">Customers</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-arrow-trend-up"></i> </a
+              ><span class="fw-light">Sales Report</span>
+            </li>
+          </ul>
+          <p class="m-2">WebSite</p>
+          <ul class="list-unstyled ps-2 m-2">
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-house-chimney-window"></i></a
+              ><span class="fw-light">Home</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-regular fa-credit-card"></i> </a
+              ><span class="fw-light">Payment</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-circle-info"></i> </a
+              ><span class="fw-light">About</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-phone"></i> </a
+              ><span class="fw-light">Contact Setting</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-regular fa-comment-dots"></i> </a
+              ><span class="fw-light">FAQ </span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-regular fa-truck"></i> </a
+              ><span class="fw-light">Order Tracking</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-filter"></i> </a
+              ><span class="fw-light">Filter</span>
+            </li>
+          </ul>
+          <p class="m-2">TOOIS</p>
+          <ul class="list-unstyled ps-2 m-2">
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-solid fa-gear"></i></a
+              ><span class="fw-light">Settings</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <a href=""><i class="fa-regular fa-circle-question"></i> </a
+              ><span class="fw-light">Help</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- ========== MAIN ========== -->
+      <main id="dashboard" class="w-100">
+        <!-- ===== HEADER ===== -->
+        <header class="d-flex justify-content-between align-items-center">
+          <!-- hamberger btn-->
+          <button class="hamburger-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div id="overlay"></div>
+
+          <form class="position-relative" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search product"
+              aria-label="Search"
+            />
+            <a href="" class="text-black"
+              ><i class="fa-solid fa-magnifying-glass position-absolute"></i
+            ></a>
+          </form>
+          <div class="d-flex gap-4 align-items-center">
+            <div class="icons d-flex gap-2">
+              <a href="#" id="darkModeToggle"
+                ><i class="fa-solid fa-moon"></i
+              ></a>
+
+              <a href=""
+                ><i class="fa-regular fa-envelope"
+                  ><span class="badge text-white">2</span></i
+                ></a
+              >
+              <a href=""
+                ><i class="fa-regular fa-bell"></i
+                ><span class="badge text-white">8</span></a
+              >
+            </div>
+            <div class="profile-card d-flex align-items-center gap-3">
+              <div class="position-relative">
+                <img
+                  src="images/9ef8cb329b949267cc8214b6727067c4a13af4b4.png"
+                  width="50px"
+                  height="50px"
+                  alt=""
+                />
+                <i
+                  class="fa-solid fa-circle fa-beat text-success position-absolute"
+                ></i>
+              </div>
+              <div class="flex flex-col justify-center">
+                <p class="text-black mb-4">Guy Hawkins</p>
+                <span>Admin</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- ===== CUSTOMER CONTENT ===== -->
+
+        <section>
+          <div class="flex justify-start items-start flex-col p-4">
+            <h1 class="font-[600] text-[24px] text-[#2A2A2A] mb-[8px]">
+              Customer
+            </h1>
+            <div class="flex justify-start items-center gap-[4px]">
+              <p class="font-[400] text-[16px] text-[#888888]">Dashboard</p>
+              <img src="icon/Vector.svg" alt="" />
+              <p class="font-[700] text-[16px] text-[#0A766D]">Customer</p>
+            </div>
+          </div>
+        </section>
+        <div class="bg-[#FFFFFF] w-full">
+          <div class="flex justify-start items-center gap-[366px] p-[24px]">
+            <div class="w-full flex justify-between items-center">
+              <div class="relative w-64 w-[600px]">
+                <input
+                  type="text"
+                  placeholder="Search for id, name Customer"
+                  class="w-full px-3 py-2 border rounded-xl pr-10 text-[#949494] text-[14px] font-[400]"
+                />
+                <img
+                  src="icon/search.svg"
+                  alt="search"
+                  class="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5"
+                />
+              </div>
+
+              <div class="flex items-center gap-[12px] w-3/2">
+                <button
+                  class="flex items-center gap-2 px-4 py-2 text-sm border rounded-lg text-[#454545] font[700] text-[12px]"
+                >
+                  Filter
+                  <img src="icon/filter.svg" alt="Filter" class="w-4 h-4" />
+                </button>
+
+                <button
+                  class="flex items-center gap-2 px-4 py-2 text-sm border rounded-lg text-[#454545] font[700] text-[12px]"
+                >
+                  Export
+                  <img src="icon/export.svg" alt="Export" class="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="container mx-auto px-4 py-8">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+              <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                  <thead class="bg-gray-100">
+                    <tr>
+                      <th
+                        class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200"
+                      >
+                        <input
+                          type="checkbox"
+                          id="select-all"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200"
+                      >
+                        <div class="flex items-center space-x-2">
+                          <span class="text-[#454545] font-[500] text-[14px]"
+                            >Name Customer</span
+                          >
+                          <div class="flex flex-col">
+                            <svg
+                              class="w-3 h-3 text-gray-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M5 15l7-7 7 7"
+                              />
+                            </svg>
+                            <svg
+                              class="w-3 h-3 -mt-1 text-gray-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200"
+                      >
+                        <div class="flex items-center space-x-2">
+                          <span class="text-[#454545] font-[500] text-[14px]"
+                            >Contact</span
+                          >
+                          <div class="flex flex-col">
+                            <svg
+                              class="w-3 h-3 text-gray-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M5 15l7-7 7 7"
+                              />
+                            </svg>
+                            <svg
+                              class="w-3 h-3 -mt-1 text-gray-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200"
+                      >
+                        <div class="flex items-center space-x-2">
+                          <span class="text-[#454545] font-[500] text-[14px]"
+                            >Purchases</span
+                          >
+                          <div class="flex flex-col">
+                            <svg
+                              class="w-3 h-3 text-gray-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M5 15l7-7 7 7"
+                              />
+                            </svg>
+                            <svg
+                              class="w-3 h-3 -mt-1 text-gray-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200"
+                      >
+                        <div class="flex items-center space-x-2">
+                          <span class="text-[#454545] font-[500] text-[14px]"
+                            >Order QTY</span
+                          >
+                          <div class="flex flex-col">
+                            <svg
+                              class="w-3 h-3 text-gray-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M5 15l7-7 7 7"
+                              />
+                            </svg>
+                            <svg
+                              class="w-3 h-3 -mt-1 text-gray-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-r border-gray-200"
+                      >
+                        <div class="flex items-center space-x-2">
+                          <span class="text-[#454545] font-[500] text-[14px]"
+                            >Address</span
+                          >
+                          <div class="flex flex-col">
+                            <svg
+                              class="w-3 h-3 text-gray-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M5 15l7-7 7 7"
+                              />
+                            </svg>
+                            <svg
+                              class="w-3 h-3 -mt-1 text-gray-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </th>
+                      <th
+                        class="px-6 py-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      >
+                        <div class="flex items-center space-x-3">
+                          <span class="text-[#454545] font-[500] text-[14px]"
+                            >Action</span
+                          >
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 64 64"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="text-gray-500"
+                          >
+                            <path
+                              d="M16 8H48C49.1046 8 50 8.89543 50 10V12C50 12.5523 49.7761 13.0589 49.4142 13.4142L36 27V46C36 46.5523 35.7761 47.0589 35.4142 47.4142L29 53C28.4477 53.5523 28 53.2761 28 52.7071V27L14.5858 13.4142C14.2239 13.0589 14 12.5523 14 12V10C14 8.89543 14.8954 8 16 8Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="bg-white divide-y divide-gray-200">
+                    <!-- مثال صفوف -->
+                    <tr class="hover:bg-gray-50">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200"
+                      >
+                        <input
+                          type="checkbox"
+                          class="row-checkbox rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                      >
+                        <div
+                          class="text-[12px] font-Plus Jakarta Sans font[r00] text-[#0A766D]"
+                        >
+                          ID12451
+                        </div>
+                        <div class="text-[14px] text-[#454545] font[600]">
+                          Leslie Alexander
+                        </div>
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        georgia@example...<br /><span
+                          class="text-[14px] font[500] text-[#454545]"
+                          >+62 819 1314 1435</span
+                        >
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[600] text-[#454545] border-r border-gray-200"
+                      >
+                        $21.78
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        30 Order
+                      </td>
+                      <td
+                        class="px-6 py-4 text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        2972 Westheimer Rd. Santa Ana, <br />
+                        Illinois 85486
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium"
+                      >
+                        <button class="text-gray-400 hover:text-blue-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                            />
+                          </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-green-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                            />
+                          </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-red-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                            />
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200"
+                      >
+                        <input
+                          type="checkbox"
+                          class="row-checkbox rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                      >
+                        <div
+                          class="text-[12px] font-Plus Jakarta Sans font[r00] text-[#0A766D]"
+                        >
+                          ID12451
+                        </div>
+                        <div class="text-[14px] text-[#454545] font[600]">
+                          Leslie Alexander
+                        </div>
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        georgia@example...<br /><span
+                          class="text-[14px] font[500] text-[#454545]"
+                          >+62 819 1314 1435</span
+                        >
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[600] text-[#454545] border-r border-gray-200"
+                      >
+                        $21.78
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        30 Order
+                      </td>
+                      <td
+                        class="px-6 py-4 text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        2972 Westheimer Rd. Santa Ana, <br />
+                        Illinois 85486
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium"
+                      >
+                        <button class="text-gray-400 hover:text-blue-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                            />
+                          </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-green-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                            />
+                          </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-red-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                            />
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200"
+                      >
+                        <input
+                          type="checkbox"
+                          class="row-checkbox rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                      >
+                        <div
+                          class="text-[12px] font-Plus Jakarta Sans font[r00] text-[#0A766D]"
+                        >
+                          ID12451
+                        </div>
+                        <div class="text-[14px] text-[#454545] font[600]">
+                          Leslie Alexander
+                        </div>
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        georgia@example...<br /><span
+                          class="text-[14px] font[500] text-[#454545]"
+                          >+62 819 1314 1435</span
+                        >
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[600] text-[#454545] border-r border-gray-200"
+                      >
+                        $21.78
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        30 Order
+                      </td>
+                      <td
+                        class="px-6 py-4 text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        2972 Westheimer Rd. Santa Ana, <br />
+                        Illinois 85486
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium"
+                      >
+                        <button class="text-gray-400 hover:text-blue-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                            />
+                          </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-green-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                            />
+                          </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-red-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                            />
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200"
+                      >
+                        <input
+                          type="checkbox"
+                          class="row-checkbox rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                      >
+                        <div
+                          class="text-[12px] font-Plus Jakarta Sans font[r00] text-[#0A766D]"
+                        >
+                          ID12451
+                        </div>
+                        <div class="text-[14px] text-[#454545] font[600]">
+                          Leslie Alexander
+                        </div>
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        georgia@example...<br /><span
+                          class="text-[14px] font[500] text-[#454545]"
+                          >+62 819 1314 1435</span
+                        >
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[600] text-[#454545] border-r border-gray-200"
+                      >
+                        $21.78
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        30 Order
+                      </td>
+                      <td
+                        class="px-6 py-4 text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        2972 Westheimer Rd. Santa Ana, <br />
+                        Illinois 85486
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium"
+                      >
+                        <button class="text-gray-400 hover:text-blue-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                            />
+                          </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-green-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                            />
+                          </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-red-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                            />
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200"
+                      >
+                        <input
+                          type="checkbox"
+                          class="row-checkbox rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                      >
+                        <div
+                          class="text-[12px] font-Plus Jakarta Sans font[r00] text-[#0A766D]"
+                        >
+                          ID12451
+                        </div>
+                        <div class="text-[14px] text-[#454545] font[600]">
+                          Leslie Alexander
+                        </div>
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        georgia@example...<br /><span
+                          class="text-[14px] font[500] text-[#454545]"
+                          >+62 819 1314 1435</span
+                        >
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[600] text-[#454545] border-r border-gray-200"
+                      >
+                        $21.78
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        30 Order
+                      </td>
+                      <td
+                        class="px-6 py-4 text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        2972 Westheimer Rd. Santa Ana, <br />
+                        Illinois 85486
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium"
+                      >
+                        <button class="text-gray-400 hover:text-blue-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                            />
+                          </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-green-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                            />
+                          </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-red-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                            />
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                      <td
+                        class="px-6 py-4 text-center border-r border-gray-200"
+                      >
+                        <input
+                          type="checkbox"
+                          class="row-checkbox rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap border-r border-gray-200"
+                      >
+                        <div
+                          class="text-[12px] font-Plus Jakarta Sans font[r00] text-[#0A766D]"
+                        >
+                          ID12451
+                        </div>
+                        <div class="text-[14px] text-[#454545] font[600]">
+                          Leslie Alexander
+                        </div>
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        georgia@example...<br /><span
+                          class="text-[14px] font[500] text-[#454545]"
+                          >+62 819 1314 1435</span
+                        >
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[600] text-[#454545] border-r border-gray-200"
+                      >
+                        $21.78
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        30 Order
+                      </td>
+                      <td
+                        class="px-6 py-4 text-[14px] font[400] text-[#454545] border-r border-gray-200"
+                      >
+                        2972 Westheimer Rd. Santa Ana, <br />
+                        Illinois 85486
+                      </td>
+                      <td
+                        class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium"
+                      >
+                        <button class="text-gray-400 hover:text-blue-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                            />
+                          </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-green-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                            />
+                          </svg>
+                        </button>
+                        <button class="text-gray-400 hover:text-red-600 mx-2">
+                          <svg
+                            class="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                            />
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div
+                class="bg-gray-50 px-6 py-[24px] flex items-center justify-between border-t border-gray-200"
+              >
+                <div class="text-[14px] font-[400] text-[#737373]">
+                  <span class="text-[14px] font-[700] text-[#0A766D]">1</span> -
+                  10 of 13 Pages
+                </div>
+                <div class="flex items-center space-x-4">
+                  <span class="text-[14px] font-[400] text-[The page on]"
+                    >The page on</span
+                  >
+                  <select
+                    class="border border-gray-300 rounded-md px-2 py-2 text-sm"
+                  >
+                    <option>1</option>
+                  </select>
+                  <button class="p-2 rounded-xl border border-gray-300">
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 19l-7-7 7-7"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="p-2 rounded-xl border border-gray-300 hover:bg-gray-100"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      ```
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="js/jQuere.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
