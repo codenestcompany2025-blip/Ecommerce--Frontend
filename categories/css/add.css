@@ -1,0 +1,428 @@
+* {     
+    margin: 0;     
+    padding: 0;     
+    box-sizing: border-box; 
+} 
+
+/* Sidebar styling */
+#sidebar { 
+    width: 15%;
+    height:auto;
+    padding-bottom: 100px;             
+    background-color: #0A766D;         
+}  
+
+
+/* Logo container heading styling */
+.logo-container h2 {     
+    color: #fff;     
+    font-family: "Ruwudu", serif;     
+    font-weight: 700;     
+    font-size: 26px;     
+    padding-top: 7px; 
+}  
+
+/* Logo circle styling */
+.logo {     
+    background-color: #fff;     
+    width: 40px;     
+    height: 40px;     
+    border-radius: 50%;     
+    color: #0A766D;     
+    font-size: 40px;     
+    font-weight: 500;     
+    display: flex;     
+    font-family: 'Times New Roman', Times, serif;     
+    justify-content: center;     
+    align-items: center;     
+    position: relative; 
+}  
+
+/* Logo decorative line after element */
+.logo::after {     
+    content: "";     
+    position: absolute;     
+    background-color: #0A766D;     
+    width: 27px;     
+    height: 2px;     
+    top: 50%;     
+    left: 68%;     
+    transform: translate(-50%, -50%);     
+    border-radius: 5px; 
+}  
+
+/* Rotate logout icon */
+.fa-right-from-bracket {     
+    transform: rotate(180deg); 
+}  
+
+/* Sidebar paragraph styling */
+#sidebar p {     
+    color: rgba(182, 223, 219, 1);     
+    font-weight: 400;     
+    font-size: 14px; 
+}  
+
+/* Sidebar list span styling */
+ul li span {     
+    font-size: 16px;     
+    color: rgba(231, 244, 243, 1); 
+}  
+
+/* Sidebar list items spacing and font */
+ul li {     
+    margin-block: 20px;     
+    padding: 5px;     
+    font-family: "Plus Jakarta Sans", sans-serif;  
+}  
+
+/* Sidebar links color */
+ul li a {     
+    color: #fff; 
+}  
+
+/* Sidebar list hover effect */
+ul li:hover {     
+    background-color: #fff;     
+    border-radius: 8px;     
+    color: teal; 
+}  
+
+/* Sidebar links hover color */
+ul li:hover a {     
+    color: rgba(5, 59, 54, 1); 
+}  
+
+/* Sidebar spans hover color */
+ul li:hover span {     
+    color: rgba(5, 59, 54, 1); 
+}  
+
+/* Dashboard container styling */
+#dashboard {     
+    width: 85%;     
+    height: 87px;     
+    margin-top: 80px; 
+}  
+
+/* Header styling */
+header {     
+    background-color: rgba(231, 244, 243, 1);     
+    border-bottom: 2px solid rgba(231, 231, 231, 1);     
+    padding: 20px;     
+    position: absolute;     
+    top: 0;     
+    left: 15%;     
+    width: 85%;     
+    z-index: 1000; 
+}  
+
+/* Search icon positioning in header */
+header .fa-magnifying-glass {     
+    top: 10px;     
+    left: 88%; 
+}  
+
+/* Icons container padding and border */
+.icons {     
+    padding: 10px;     
+    border-right: 1px solid rgba(201, 201, 201, 1); 
+}  
+
+/* Individual icon link styling */
+.icons a {     
+    position: relative;     
+    text-decoration: none;     
+    color: rgba(69, 69, 69, 1);     
+    font-size: 17px;     
+    background-color: #fff;     
+    padding: 5px;     
+    border-radius: 6px;     
+    display: inline-flex;     
+    align-items: center;     
+    justify-content: center; 
+}  
+
+/* Notification badge styling */
+.icons .badge {     
+    position: absolute;     
+    top: -2px;     
+    right: -3px;     
+    background-color: red;     
+    font-size: 10px;     
+    font-weight: bold;     
+    padding: 2px 5px;     
+    border-radius: 50%;     
+    min-width: 16px;     
+    height: 16px;     
+    display: flex;     
+    align-items: center;     
+    justify-content: center; 
+}  
+
+/* Image border radius */
+img {     
+    border-radius: 8px; 
+}  
+
+/* Small circle icon positioning */
+.fa-circle {     
+    top: 40px;     
+    right: -3px;     
+    font-size: 10px; 
+}  
+
+/* Header text styling */
+header p {     
+    font-size: 16px;     
+    font-weight: 700;     
+    font-family: "Manrope", sans-serif; 
+}  
+
+/* Header span text styling */
+header span {     
+    font-size: 12px;     
+    font-weight: 400;     
+    color: rgba(114, 114, 114, 1); 
+}  
+
+/* Profile card second div line height */
+.profile-card div:nth-child(2) {     
+    line-height: 3px; 
+}  
+
+/* All products section styling */
+#all-product {     
+    padding: 20px;     
+    background-color: #fff; 
+}  
+
+/* Top div styling */
+.top-div {     
+    line-height: 0; 
+}  
+
+/* Top div paragraph styling */
+.top-div p {     
+    font-weight: 600;     
+    font-size: 20px; 
+}  
+
+/* Top div link styling */
+.top-div a {     
+    text-decoration: none; 
+}  
+
+/* Top div link icon and span color */
+.top-div a span, .top-div a i {     
+    color: rgba(136, 136, 136, 1);  
+}  
+
+/* Top div last span color */
+.top-div a span:last-of-type {     
+    color: #0D9488; 
+}  
+
+/* Product container styling */
+.product-contenair {     
+    background-color: #0D9488;     
+    padding: 20px;     
+    border: 1px black solid;     
+    border-radius: 8px; 
+}  
+
+/* Form input width inside product container */
+.product-contenair form input {     
+    width: 50%; 
+}  
+
+/* Search icon positioning inside product container */
+.product-contenair .fa-magnifying-glass {     
+    top: 10px;     
+    left: 48%; 
+}  
+
+/* ===== Responsive for Tablet ===== */
+@media (min-width: 768px) and (max-width:991px) {        
+
+    /* Logo heading smaller font */
+    .logo-container h2 {         
+        font-size: 22px;     
+    }     
+
+    /* Hide logout icon */
+    .fa-right-from-bracket {         
+        display: none;     
+    }     
+
+    /* Smaller logo size */
+    .logo {         
+        width: 30px;         
+        height: 30px;         
+        font-size: 30px;     
+    }     
+
+    /* Hide logo decorative line */
+    .logo::after {       
+        display: none;     
+    }     
+
+    /* Smaller font for sidebar span */
+    ul li span {         
+        font-size: 12px;     
+    }     
+}   
+
+/* ===== Responsive for Mobile ===== */
+@media (min-width:320px) and (max-width: 767px) {     
+    
+    /* Hide logo heading */
+    .logo-container h2 {         
+        display: none;      
+    }      
+
+    /* Smaller logo size */
+    .logo {         
+        width: 35px;         
+        height: 35px;         
+        font-size: 24px;     
+    }     
+
+    /* Hide logo decorative line */
+    .logo::after {         
+        display: none;     
+    }      
+
+    /* Smaller icons */
+    .icons a {         
+        font-size: 14px;         
+        padding: 3px;     
+    }     
+
+    /* Hide sidebar spans */
+    ul li span {         
+        display: none;     
+    }     
+
+    /* Smaller sidebar paragraph */
+    #sidebar p {         
+        font-size: 10px;     
+    }     
+
+    /* Remove hover background on sidebar items */
+    ul li:hover {         
+        background-color: transparent;     
+    }     
+
+    /* Hide search icon */
+    .fa-magnifying-glass {     
+        display: none;     
+    }     
+
+    /* Dashboard paragraph smaller font */
+    #dashboard p {     
+        font-size: 10px;     
+        line-height: 10px;     
+    } 
+} 
+
+.start{
+    background-color:#F7F7F7;
+}
+.icon3{
+    filter: brightness(0);
+    border-radius: 0px;
+}
+
+.yes{
+background-color:#0D9488;
+color:#fff;
+border: none;
+border-radius: 5px;
+}
+.no{
+background-color: #fff;
+color: #000;
+border: 1px solid #c9c9c9;
+border-radius: 5px;
+}
+.number{
+    color: #0D9488;
+}
+.num{
+    color:#0D9488;
+}
+/*  Add*/
+.Add{
+    height:128vh;
+    background-color:rgba(0, 0, 0, 0.04);
+}
+.SaveProduct{
+    background-color:#0A766D;
+    color:#fff;
+    border-radius: 10px;
+}
+.fixed-btn{
+    position:absolute;
+    right: 20px;  
+}
+.AddCat{
+    color:#0A766D;
+}
+
+/* model animation*/
+.modal-content {
+    animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+from {
+    transform: scale(0.9);
+    opacity: 0;
+}
+to {
+    transform: scale(1);
+    opacity: 1;
+}
+} 
+/* Responsive */
+    @media(max-width:767px) {
+    .form-control{
+    height:40px;}
+    .Add{
+    height:150vh ;
+    }
+} 
+
+
+@media (max-width: 992px) {
+    .Add{
+        /* height: 125vh; */
+        height: 124vh;
+}
+    button{
+        overflow: hidden;
+}
+}
+
+/* dark mode */
+body.dark {
+background-color: #121212;
+color: #fff;
+}
+body.dark .icon3{
+filter:brightness(0) invert(1);
+}
+body.dark .card {
+color: #fff;
+background-color: #302f2f;;
+} 
+body.dark header{
+    background-color: #2b2828;
+}
+body.dark .start{
+    background-color:#000;
+}
+body.dark .fa{
+    color:#0D9488;
+}
