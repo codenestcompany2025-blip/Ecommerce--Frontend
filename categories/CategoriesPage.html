@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> E-commerce Categories List</title>
+    <!-- هاد ملف بوتستراب -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- هاد ملف التصميم -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--هاد ملف الايقونات للفونت اوسوم-->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- الخطوط المستخدمة في التصميم -->
+    <link href="https://fonts.googleapis.com/css2?family=Ruwudu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="d-flex start ">
+        <!-- aside start -->
+        <aside id="sidebar" class="px-2 py-2">
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <div class="logo-container d-flex align-items-center">
+                    <div class="logo">E</div>
+                    <h2 class="m-0 ">commerce</h2>
+                </div>
+                <a href=""><i class="fa-solid fa-right-from-bracket text-white"></i></a>
+            </div>
+            <div class="w-100 p-2 ">
+                <p class="m-2 ">GENERAL</p>
+                <ul class="list-unstyled ps-2 m-2">
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-regular fa-house"></i></a><span
+                            class="fw-light">Dashboard</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-store"></i>
+                        </a><span class="fw-light">Products (119)</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-table-cells-large"></i>
+                        </a><span class="fw-light">Categories</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-regular fa-file-lines"></i>
+                        </a><span class="fw-light">Orders</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-user-group"></i>
+                        </a><span class="fw-light">Customers</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-arrow-trend-up"></i>
+                        </a><span class="fw-light">Sales Report</span></li>
+                </ul>
+                <p class="m-2">WebSite</p>
+                <ul class="list-unstyled ps-2 m-2">
+                    <li class="d-flex align-items-center gap-2"><a href=""><i
+                                class="fa-solid fa-house-chimney-window"></i></a><span class="fw-light">Home</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-regular fa-credit-card"></i>
+                        </a><span class="fw-light">Payment</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-circle-info"></i>
+                        </a><span class="fw-light">About</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-phone"></i>
+                        </a><span class="fw-light">Contact Setting</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-regular fa-comment-dots"></i>
+                        </a><span class="fw-light">FAQ </span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-regular fa-truck"></i>
+                        </a><span class="fw-light">Order Tracking</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-filter"></i>
+                        </a><span class="fw-light">Filter</span></li>
+
+                </ul>
+                <p class="m-2">TOOIS</p>
+                <ul class="list-unstyled ps-2 m-2">
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-solid fa-gear"></i></a><span
+                            class="fw-light">Settings</span></li>
+                    <li class="d-flex align-items-center gap-2"><a href=""><i class="fa-regular fa-circle-question"></i>
+                        </a><span class="fw-light">Help</span></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- asaide end -->
+        <!-- main start -->
+        <main id="dashboard">
+            <header class="d-flex justify-content-between align-items-center">
+                <form class="position-relative" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search product" aria-label="Search">
+                    <a href="" class="text-black"><i class="fa-solid fa-magnifying-glass position-absolute search icon3"></i></a>
+                </form>
+                <div class="d-flex gap-4 align-items-center">
+                    <div class="icons d-flex gap-2">
+            <a href="#"><i class="fa-regular fa-moon"onclick="document.body.classList.toggle('dark')"></i></a>
+                        <a href=""><i class="fa-regular fa-envelope"></i><span class="badge text-white">2</span></a>
+                        <a href=""><i class="fa-regular fa-bell"></i><span class="badge text-white">8</span></a>
+
+                    </div>
+                    <div class="profile-card d-flex align-items-center gap-3">
+                        <div class="position-relative "><img src="pic/frame.png"
+                                width="55px" height="50px" alt="">
+                            <i class="fa-solid fa-circle fa-beat text-success position-absolute"></i>
+                        </div>
+                        <div>
+                            <p class="text-black">Guy Hawkins</p>
+                            <span>Admin</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </header>
+
+
+
+            <!--  start Categories -->
+                <div class="card-header  ">
+                    <div class=" d-flex  justify-content-between align-items-center ">
+                    <h4 class="mb-2 mt-3">Categories</h4>
+            </div>
+                <div class="d-flex mt-2">
+            <span>Dashboard <img src="icons/play.png" class="me-2 ms-2"> Category </span>
+        </div>
+
+                    <div class="card mt-4 pb-4 px-2">
+                <div class="card-body">
+                    <div class="mb-3 d-flex flex-column flex-lg-row gap-3 justify-content-between align-items-lg-center">
+<!-- Search -->
+<div class="position-relative search-box me-lg-3">
+    <input 
+    type="text" class="form-control  new2" placeholder="Search for id, name Category">
+    <a href="#" class="nav-link  search-icon1">
+<img src="icons/search.svg" class="icon3 search" alt="">
+</a>
+</div>
+
+<!-- Buttons -->
+<div class="d-flex flex-wrap flex-lg-nowrap gap-2 align-items-center">
+
+    <button class="btn btn-outline-secondary new1">
+    Filter <img src="icons/filter-list.png" class="ms-2 icon3">
+    </button>
+
+    <button class="btn btn-outline-secondary new1">
+    Export <img src="icons/Export.png" class="ms-2 icon3">
+    </button>
+
+    <button type="button" class="btn new btn btn-outline-secondary" id="testBtn">
+    New Category <a href="#" class="nav-link1">
+<img src="icons/plus.svg" class="icon" alt="">
+</a>
+    </button>
+
+    <img 
+    src="icons/delete-1.png"role="button" data-bs-toggle="modal" data-bs-target="#deleteModal">
+</div>
+
+</div>
+
+                </div>
+
+
+<!-- Tabel -->
+                    <div class="card  mx-2 pt-0  ">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead>
+                                <tr class="bg-light">
+
+                                    <th scope="col"><input type="checkbox">
+                                    </th>
+                                    <th scope="col">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                        <h6> Category</h6>
+                                        <img src="icons/_sorter.svg" >
+                                        </div>
+                                    </th>
+
+                                    <th scope="col">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                        <h6>Description</h6>
+                                        <img src="icons/_sorter.svg" >
+                                        </div>
+                                    </th>
+                                
+                                <th scope="col">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                        <h6># of Product</h6>
+                                        <img src="icons/_sorter.svg" >
+                                        </div>
+                                    </th>
+                                
+                                    <th scope="col">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                        <h6>Last Update</h6>
+                                        <img src="icons/_sorter.svg" >
+                                        </div>
+                                    </th>
+                                    
+                                    <th scope="col">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                        <h6>Status</h6>
+                                        <img src="icons/_sorter.svg" >
+                                        </div>
+                                    </th>
+                                                    
+                                    <th scope="col">
+                                        <h6>Action</h6>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                <td>
+
+                                        <div class="d-flex align-items-center gap-2">
+
+                                        <img src="pic/Photo product.png">
+                                    <div>                      
+                                        <span class="d-block number">1</span>
+                                        <span class="d-block text-muted"> Audio & Headphone</span>
+                                        </div>
+                                </div>  
+
+                                    </td>
+                                <td>
+                    <span class="d-block">Premium sound quality</span>
+                    <span class="d-block text-muted">devices</span>
+                    </td>
+                                    <td>234</td>
+                                    <td>
+                                        <div class=" text-muted">
+                                            <span class="d-block">04/17/23</span>
+                                            <span class="d-block">at 8:25 PM</span>
+                                        </div>
+
+                                        </td>
+                                    <td><span class="status-visible">Visible</span></td>
+                                    <td class="table-actions">
+                                        <div class="d-flex gap-4">
+                                    <img src="icons/eye-open.png" class="icon3">
+                                        <img src="icons/text.png" class="icon3">
+                                        <img src="icons/delete.png" class="icon3">
+                                    </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+
+                                        <div class="d-flex align-items-center gap-2">
+
+                                        <img src="pic/Photo product (1).png">
+                                    <div>                      
+                                        <span class="d-block number">2</span>
+                                        <span class="d-block text-muted"> Watches</span>
+                                        </div>
+                                </div>  
+
+                                    </td>
+                                <td>
+                    <span class="d-block">Latest smartphones from</span>
+                    <span class="d-block text-muted">top brands</span>
+                    </td>
+                    <td>234</td>
+                    <td>
+                                <div class=" text-muted">
+                                            <span class="d-block">04/17/23</span>
+                                            <span class="d-block">at 8:25 PM</span>
+                                        </div>
+                    </td>
+                                    <td><span class="status-hidden">hidden</span></td>
+                                    <td class="table-actions">
+                                        <div class="d-flex gap-4">
+                                        <img src="icons/eye-open (1).png" class="icon3">
+                                        <img src="icons/text.png" class="icon3">
+                                        <img src="icons/delete.png" class="icon3">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+
+                                        <div class="d-flex align-items-center gap-2">
+
+                                        <img src="pic/Photo product (2).png">
+                                    <div>                      
+                                        <span class="d-block number">3</span>
+                                        <span class="d-block text-muted">Camera & Accessories</span>
+                                        </div>
+                                </div>  
+
+                                    </td>
+                                <td>
+                    <span class="d-block">Professional & consumer </span>
+                    <span class="d-block text-muted">cameras</span>
+                    </td>
+                                    <td>234</td>
+                                    <td>
+                                <div class=" text-muted">
+                                            <span class="d-block">04/17/23</span>
+                                            <span class="d-block">at 8:25 PM</span>
+                                        </div>
+                                        </td>
+                                    <td><span class="status-visible">Visible</span></td>
+                                    <td class="table-actions">
+                                        <div class="d-flex gap-4">
+                                        <img src="icons/eye-open.png" class="icon3">
+                                        <img src="icons/text.png" class="icon3">
+                                        <img src="icons/delete.png" class="icon3">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+
+                                        <div class="d-flex align-items-center gap-2">
+
+                                        <img src="pic/Photo product (3).png">
+                                    <div>                      
+                                        <span class="d-block number">4</span>
+                                        <span class="d-block text-muted">Phone & Tab</span>
+                                        </div>
+                                </div>  
+
+                                    </td>
+                                <td>
+                    <span class="d-block">Professional & consumer</span>
+                    <span class="d-block text-muted">cameras</span>
+                    </td>
+                                    <td>234</td>
+                                    <td>
+                                    <div class=" text-muted">
+                                            <span class="d-block">04/17/23</span>
+                                            <span class="d-block">at 8:25 PM</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="status-hidden">hidden</span></td>
+                                    <td class="table-actions">
+                                        <div class="d-flex gap-4">
+                                    <img src="icons/eye-open (1).png" class="icon3">
+                                        <img src="icons/text.png" class="icon3">
+                                        <img src="icons/delete.png" class="icon3">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                <td>
+
+                                        <div class="d-flex align-items-center gap-2">
+
+                                        <img src="pic/Photo product (6).png">
+                                    <div>                      
+                                        <span class="d-block number">5</span>
+                                        <span class="d-block text-muted"> Lamp & Lights</span>
+                                        </div>
+                                </div>  
+
+                                    </td>
+                                <td>
+                    <span class="d-block">Professional & consumer</span>
+                    <span class="d-block text-muted">cameras</span>
+                    </td>
+                                    <td>234</td>
+                                    <td>
+                                    <div class=" text-muted">
+                                            <span class="d-block">04/17/23</span>
+                                            <span class="d-block">at 8:25 PM</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="status-visible">Visible</span></td>
+                                    <td class="table-actions">
+                                        <div class="d-flex gap-4">
+                                        <img src="icons/eye-open.png" class="icon3">
+                                        <img src="icons/text.png" class="icon3">
+                                        <img src="icons/delete.png" class="icon3">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                <td>
+
+                                        <div class="d-flex align-items-center gap-2">
+
+                                        <img src="pic/Photo product (8).png">
+                                    <div>                      
+                                        <span class="d-block number">6</span>
+                                        <span class="d-block text-muted">Electric Products</span>
+                                        </div>
+                                </div>  
+
+                                    </td>
+                                <td>
+                    <span class="d-block">Professional & consumer</span>
+                    <span class="d-block text-muted">cameras</span>
+                    </td>
+                                    <td>234</td>
+                                    <td>
+                                        <div class=" text-muted">
+                                            <span class="d-block">04/17/23</span>
+                                            <span class="d-block">at 8:25 PM</span>
+                                        </div>
+                                        
+                                    </td>
+                                    <td><span class="status-hidden">hidden</span></td>
+                                    <td class="table-actions">
+                                        <div class="d-flex gap-4">
+                                        <img src="icons/eye-open (1).png" class="icon3">
+                                        <img src="icons/text.png" class="icon3">
+                                        <img src="icons/delete.png" class="icon3">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                <td>
+
+                                        <div class="d-flex align-items-center gap-2">
+
+                                        <img src="pic/Photo product (6).png">
+                                    <div>                      
+                                        <span class="d-block number">5</span>
+                                        <span class="d-block text-muted">Lamp & Lights</span>
+                                        </div>
+                                </div>  
+
+                                    </td>
+                                <td>
+                    <span class="d-block">Professional & consumer</span>
+                    <span class="d-block text-muted">cameras</span>
+                    </td>
+                                    <td>234</td>
+                                    <td>
+                                        <div class=" text-muted">
+                                            <span class="d-block">04/17/23</span>
+                                            <span class="d-block">at 8:25 PM</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="status-visible">Visible</span></td>
+                                    <td class="table-actions">
+                                        <div class="d-flex gap-4">
+                                        <img src="icons/eye-open.png" class="icon3">
+                                        <img src="icons/text.png" class="icon3">
+                                        <img src="icons/delete.png" class="icon3">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                <td>
+
+                                        <div class="d-flex align-items-center gap-2">
+
+                                        <img src="pic/Photo product (8).png" >
+                                    <div>                      
+                                        <span class="d-block number">6</span>
+                                        <span class="d-block text-muted">Electric Products</span>
+                                        </div>
+                                </div>  
+
+                                    </td>
+                                <td>
+                    <span class="d-block">Professional & consumer</span>
+                    <span class="d-block text-muted">cameras</span>
+                    </td>
+                                    <td>234</td>
+                                    <td> <div class=" text-muted">
+                                            <span class="d-block">04/17/23</span>
+                                            <span class="d-block">at 8:25 PM</span>
+                                        </div></td>
+                                    <td><span class="status-hidden">hidden</span></td>
+                                    <td class="table-actions">
+                                        <div class="d-flex gap-4">
+                                        <img src="icons/eye-open (1).png" class="icon3">
+                                        <img src="icons/text.png" class="icon3">
+                                        <img src="icons/delete.png" class="icon3">
+                                        </div>
+                                    </td>
+                                </tr>
+                            
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+
+                                        <div class="d-flex align-items-center gap-2">
+
+                                        <img src="pic/Photo product (8).png">
+                                    <div>                      
+                                        <span class="d-block number">6</span>
+                                        <span class="d-block text-muted">Electric Products</span>
+                                        </div>
+                                </div>  
+
+                                    </td>
+                                <td>
+                        <span class="d-block">Professional & consumer</span>
+                    <span class="d-block text-muted">cameras</span>
+                    </td>
+                                    <td>234</td>
+                                    <td>
+                                        <div class=" text-muted">
+                                            <span class="d-block">04/17/23</span>
+                                            <span class="d-block">at 8:25 PM</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="status-visible">Visible</span></td>
+                                    <td class="table-actions">
+                                        <div class="d-flex gap-4">
+                                        <img src="icons/eye-open.png" class="icon3">
+                                        <img src="icons/text.png" class="icon3">
+                                        <img src="icons/delete.png" class="icon3">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+<!-- end tabel -->
+                    </div>
+                </div>
+
+
+                <div class="d-flex align-items-center justify-content-between g-10 px-3 mt-3">
+                    <p class="text-muted"><span class="num"> 1 </span> -10 0f 13 Pages</p>
+
+                        <div>
+                    <span class="me-3">The Page on</span>
+                    <button class="btn btn-outline-secondary  new1 p-1 me-2"> 1<img src="icons/arrow solid - Down.png" class="icon3"></button>
+                        <button class="btn btn-outline-secondary  new1 p-1"><img src="icons/arrow-back-simple.png" class="icon3"></button>
+                        <button class="btn btn-outline-secondary  new1 p-1"> <img src="icons/arrow-forward-simple.png" class="icon3"></button>
+        
+                        </div>
+                    </div>
+            </div>
+                </div>
+<!-- end Categories -->
+    
+        </main>
+        <!-- end main -->
+</div>
+
+
+
+
+<!-- model when to click the delete -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+
+    <div class="modal-body text-center p-4">
+        <img src="pic/delet.png">
+
+    <p class="mt-4 text-muted">
+        Are you sure you want to delete all Categories?
+        </p>
+
+        <div class="mt-4 mb-2">
+        <button type="button" class="me-3 no px-4 py-2" data-bs-dismiss="modal">
+            No
+        </button>
+
+        <button type="button" class="yes px-4 py-2" id="confirmDelete">
+            Yes
+        </button>
+        </div>
+
+    </div>
+    </div>
+</div>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+        <script src="js/custome.js"></script>
+
+
+</body>
+</html>
